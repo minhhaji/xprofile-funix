@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  background-color: rgb(204, 255, 230);
-  padding-bottom: 10%
+  background-image: url(https://lh3.googleusercontent.com/AETqVi6Dr8XHGP09XKBs57V9wzqF9pgyP94m8e3GhE66vkYJVXtcwhadyNj_dCK05ZAAr1mWQoIIk0mYS2fr7EvT6JnEqnAJrLFV7_3Wepw5lY5h5O_bh9aJR-n0dO8CHcBlI7kUhz2BpMOVZsOtVpk6pDU6vTyleDls_jMQjcSmKwc8BwWQTfCiCTQutqefFPWf3TBELgcgxiYZaZx6HSazCwNYdRUgiRakHIH6R1GB5nP4fKMZQK3Aor4L24BqSx2mONGfKusx9MrDQzc_sWKPEsJtxeNhGZnW2RY_Fc5F2jkrk9OFAc2jMIo3Dx2mVfqk7wXrYqhVWNjWYv7854hwCFa44VWCdx_FlYYrbt7yLhb9dlMAvYE2_9RYzimnn1qzborjtJcX0YJyLLXatgn-_Wmo23UsofsV32jy8RfmCILcD1d5pc5lkrVrf1vchr7BlRK7GXzUy-vL5SfdgkC7LTlJseQ3t_v8bF_YDSfxZpmSQY_6-fwwBeL5uz5h5TWw3uGiLPwjxX11gcGYUz6h2ITrvRO7nEZcBhfMgvUtcC4QOv76RmBsuGRnq05ymG1jk1sgAWGb_pO1_o9NLZFAkVVTcR-okPJ218TT1oGGzbo8LMDiurH6LLRrQRFqaEO7Zg-IrspB2royJJEh9JE44rQFDDWZrD3SDM-rnMe4=w1454-h969-no);
+  padding-bottom: 10%;
+  background-position: center
 }
 
 .App-logo {
@@ -34,15 +35,29 @@
 }
 
 h3 {
-  background-color: rgb(255, 190, 109);
+  font-family: "Comic Sans MS", cursive, sans-serif !important;
+  background-color: rgb(255, 189, 67);
   color: white !important;
-  padding: 1em;
+  padding: 0.5em;
+  margin-top: 5% !important
 }
-
+.form-group{
+  margin-top: 3%;
+}
+#ttcn {
+  color: aqua;
+  background-image: url(https://lh3.googleusercontent.com/25hlLam679PQeBghXLeZK7EoHCeVHxCjk9donHB6COzx6EoADUbNhq0dDxMiX5IbMV_4EYYSkV0xxpyWxCEBAgQHEWoItRr6jrg4RJBkQXXDpP7SgzoRJfwJyrk3S4h1OqW6VssXeVJKiSxoNubSBt05u3DKY4olPjggVOal3Le8eOwbuCmkLWmnEjxtQVoeZz6T7ynztKfUo9wDJtUqDm7loNFJTxT-6LceC8zvI1UiFZUka6RTtMPtwesqNbFbdvF43DGfAQ7RkqnWQsi53bTtNuQo5lAE-83IhEHzKaS1AbyXU1HavGZBCYhKgobtfKTKMQdXLLdPn3PSuC_GLdQoj8bYhVoany878CrYggilToObna_2kf1PvuzRadUNe0plYvdkKNwfyKOn11XYRvEhrheNvA3FWbrNyd-INEXwlili5aHPDiETw74zpYW-nlo06xtzOXG1Ms0qXDo1iblgT9Pt7Kr9fsf-Isk-VYou6eUXNqhpN0hv38qTYDhUFZcVW-GSjGEqeNoQWQKEoZT2oRQzYI_UVT6_X91-MNkvFpkx5WdIsIUb_7PvejPc5Su3CZnt5PbBg48yh8eI7V97IXATT6dy4_C2allLEqDM5XqT8AW-Tq_aA_5_BPgFl305HecIgclODJFnNLyHHTAahLjWc2kA9PgTheFyKXxP=w1280-h853-no);
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding-bottom: 2em 
+}
 #imgh {
   width: 100%;
 }
 #form {
-  width: 70%;
+  width: 60%;
   margin-top: -10%;
+}
+#card {
+  background-color: rgb(162, 236, 236);
 }
