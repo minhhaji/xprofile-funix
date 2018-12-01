@@ -1,46 +1,13 @@
 .App {
   text-align: center;
-  background-image: url(https://lh3.googleusercontent.com/AETqVi6Dr8XHGP09XKBs57V9wzqF9pgyP94m8e3GhE66vkYJVXtcwhadyNj_dCK05ZAAr1mWQoIIk0mYS2fr7EvT6JnEqnAJrLFV7_3Wepw5lY5h5O_bh9aJR-n0dO8CHcBlI7kUhz2BpMOVZsOtVpk6pDU6vTyleDls_jMQjcSmKwc8BwWQTfCiCTQutqefFPWf3TBELgcgxiYZaZx6HSazCwNYdRUgiRakHIH6R1GB5nP4fKMZQK3Aor4L24BqSx2mONGfKusx9MrDQzc_sWKPEsJtxeNhGZnW2RY_Fc5F2jkrk9OFAc2jMIo3Dx2mVfqk7wXrYqhVWNjWYv7854hwCFa44VWCdx_FlYYrbt7yLhb9dlMAvYE2_9RYzimnn1qzborjtJcX0YJyLLXatgn-_Wmo23UsofsV32jy8RfmCILcD1d5pc5lkrVrf1vchr7BlRK7GXzUy-vL5SfdgkC7LTlJseQ3t_v8bF_YDSfxZpmSQY_6-fwwBeL5uz5h5TWw3uGiLPwjxX11gcGYUz6h2ITrvRO7nEZcBhfMgvUtcC4QOv76RmBsuGRnq05ymG1jk1sgAWGb_pO1_o9NLZFAkVVTcR-okPJ218TT1oGGzbo8LMDiurH6LLRrQRFqaEO7Zg-IrspB2royJJEh9JE44rQFDDWZrD3SDM-rnMe4=w1454-h969-no);
   padding-bottom: 10%;
-  background-position: center;
-  background-size: contain
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 h3 {
   font-family:  sans-serif !important;
-  background-color: rgb(173, 202, 42);
-  color: white !important;
+  color: gray !important;
   padding: 0.5em;
   margin-top: 5% !important;
+  border-bottom:  double
 }
 .form-group{
   margin-top: 3%;
@@ -49,43 +16,24 @@ small {
   font-style: italic;
   font-size: 0.9em !important;
 }
-#ttcn {
-  color: rgb(186, 235, 235);
-  background-image: url(https://lh3.googleusercontent.com/25hlLam679PQeBghXLeZK7EoHCeVHxCjk9donHB6COzx6EoADUbNhq0dDxMiX5IbMV_4EYYSkV0xxpyWxCEBAgQHEWoItRr6jrg4RJBkQXXDpP7SgzoRJfwJyrk3S4h1OqW6VssXeVJKiSxoNubSBt05u3DKY4olPjggVOal3Le8eOwbuCmkLWmnEjxtQVoeZz6T7ynztKfUo9wDJtUqDm7loNFJTxT-6LceC8zvI1UiFZUka6RTtMPtwesqNbFbdvF43DGfAQ7RkqnWQsi53bTtNuQo5lAE-83IhEHzKaS1AbyXU1HavGZBCYhKgobtfKTKMQdXLLdPn3PSuC_GLdQoj8bYhVoany878CrYggilToObna_2kf1PvuzRadUNe0plYvdkKNwfyKOn11XYRvEhrheNvA3FWbrNyd-INEXwlili5aHPDiETw74zpYW-nlo06xtzOXG1Ms0qXDo1iblgT9Pt7Kr9fsf-Isk-VYou6eUXNqhpN0hv38qTYDhUFZcVW-GSjGEqeNoQWQKEoZT2oRQzYI_UVT6_X91-MNkvFpkx5WdIsIUb_7PvejPc5Su3CZnt5PbBg48yh8eI7V97IXATT6dy4_C2allLEqDM5XqT8AW-Tq_aA_5_BPgFl305HecIgclODJFnNLyHHTAahLjWc2kA9PgTheFyKXxP=w1280-h853-no);
-  background-position: center; /* Center the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  padding-bottom: 2em;
-}
-#ldtg {
-  color: rgb(236, 227, 95);
-  background-image: url(https://lh3.googleusercontent.com/v6ZrDlC5i6-xKYgGh31fkl4bLDYXOmnQZlf0jvMTlyBzmYQaxGBTxySnzaCRSctVL8KCPKpdtFamwyE3bMCx6e7TCLSz8qa8h5pWyT9QewgW8xb59WLwoqElKwoRsjV9GM9V-GA5hvt5UzKlP7ozqKpUjysmWrEWsbUGj6Dq2ghNgbYN9sA7k19mKF-VTCKIa-RLT-mVfnU8_XTglssRngprmimdbzu6n_gmVkw2HDQKrvBPyjWMhNZ_d723evMs-6miRsNze35kRcHl_4FyMMNvjkhvEEpetB9gd67z9_h7MC53fdAdGLGkSXqEQ2zyEHS6WxHlN-vlaAPDkQo8_7FWptTgSlhPE2JXCV3unwIU1RLUPskcVTRIl3N8ARpe6e2c601C38PuJ9F794Xfyp4I5iBTkynevwWbEGXypYzG8fCMmFLk5AKJGYZM_Dg8wDj98LdRkSS4mZTJo4JMrnnjWtF1fpcpr4do2sutEM5npDBIjWlhNoBoN03Fbk0_FlrdKc09mueMtjCLTEfEdgZjCTI7497f1eIu4Mi0rfXL4QFVR5D9eZrbssDfygpREriWJu99Rsvq90cSREYKtCdbafDvUV6ngCoJqPya6t3kiStJP0SvlavQkHGl0aUiket5e2iV2k6pPNJWBl1h3wME9C7McuUnEYmLRE5qnskH=w727-h969-no);
-  background-position: center; /* Center the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  padding-bottom: 2em;
-}
-#ttlhk {
-  background-color: white;
-  padding-bottom: 2em;
-}
-#cpt {
-  background-color: rgb(155, 185, 241);
-  padding-bottom: 1em;
-}
 #cpt .form-control{
-  background-color: rgb(155, 185, 241);
   border: none !important;
 }
 #imgh {
   width: 100%;
-}
-#form {
-  width: 60%;
-  margin-top: -10%;
+  margin: -6% 0 1% 
 }
 #card {
   background-color: rgb(162, 236, 236);
 }
 .form-control {
   border: none !important;
-  border-bottom: 2px solid blue !important;
+  border-bottom: 2px solid rgb(117, 149, 190) !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+.formErrors {
+  font-weight: bold !important;
+  background-color: rgb(197, 221, 140)
 }
