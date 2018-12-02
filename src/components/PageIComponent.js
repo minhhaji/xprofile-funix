@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import { Button, Col } from 'reactstrap';
 import {FormErrors} from './FormErrors';
 import TextareaAutosize from 'react-autosize-textarea';
-
 class I extends Component {
     constructor(props){
         super(props);
@@ -33,21 +32,33 @@ class I extends Component {
             jobValid: true,
             formValid: false
         }
-        this.nextPage = this.nextPage.bind(this);
+        this.submitPage = this.submitPage.bind(this);
         /* this.handleUserInput = this.handleUserInput.bind(this);
         in order to 'post' :))
         */
     }
-
+    submitPage() {
+        this.refs.ref1.focus();this.refs.ref1.blur()
+        this.refs.ref2.focus();this.refs.ref2.blur()
+        this.refs.ref3.textarea.focus(); this.refs.ref3.textarea.blur()
+        this.refs.ref4.textarea.focus(); this.refs.ref4.textarea.blur()
+        this.refs.ref5.textarea.focus();this.refs.ref5.textarea.blur()
+        this.refs.ref6.focus();this.refs.ref6.blur()
+        this.refs.ref7.focus();this.refs.ref7.blur()
+        this.refs.ref8.focus();this.refs.ref8.blur()
+        this.refs.ref9.focus();this.refs.ref9.blur()
+        this.refs.ref10.focus();this.refs.ref10.blur()
+        if(this.state.formValid) {
+            this.nextPage();
+        }
+    }
     nextPage() {
-        
         this.props.nextPage();
         /* and here
         let inf = this.state
         this.props.postForm(inf.userName, inf.birthday, inf.sex, inf.householdAddress, inf.address, inf.city, inf.nation, inf.passportNum, inf.issuedDate, inf.issuedAddress, inf.accface, inf.job);
     */
     }
-
     handleUserInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
@@ -158,7 +169,7 @@ class I extends Component {
             <h3>I. THÔNG TIN CÁ NHÂN</h3>
             <div className="form-group">
                 <label htmlFor="userName" md={12}><h4>1. Họ và tên: <span className='text-danger'>*</span></h4></label>
-                    <input type='text' id="userName" name="userName" placeholder="Your Answer" className="form-control" value={this.state.userName}
+                    <input type='text' id="userName" name="userName" ref='ref1' placeholder="Your Answer" className="form-control" value={this.state.userName} required
                         onChange={this.handleUserInput}
                         onBlur={this.handleUserInput}/>
                 <p className='text-danger'>{this.state.formErrors.userNameValid}</p>
@@ -166,13 +177,13 @@ class I extends Component {
             
             <div className="form-group">
                 <label htmlFor="birthday"><h4>2. Ngày tháng năm sinh: <span className='text-danger'>*</span></h4><small>Date</small></label>
-                    <input type='date' id="birthday" name="birthday" className="form-control" value={this.state.birthday} required
+                    <input type='date' id="birthday" name="birthday" ref='ref2' className="form-control" value={this.state.birthday} required
                         onChange={this.handleUserInput}
                         onBlur={this.handleUserInput}/>
                 <p className='text-danger'>{this.state.formErrors.birthdayValid}</p>
             </div>
             <div className='form-group'>
-            <label><h4>3. Giới tính: <span className='text-danger'>*</span></h4></label>
+            <label htmlFor='sex' ><h4>3. Giới tính: <span className='text-danger'>*</span></h4></label>
             <div>
                 <Col md={6}>
                 <label>
@@ -188,7 +199,7 @@ class I extends Component {
             </div>
             <div className='form-group'>
                 <label htmlFor="householdAddress"><h4>4. Ðịa chỉ hộ khẩu: <span className='text-danger'>*</span></h4><small>Vui lòng viết theo dúng thông tin trên sổ hộ khẩu thường trú</small></label>
-                    <TextareaAutosize id="householdAddress" name="householdAddress" placeholder="Your Answer" className='form-control'
+                    <TextareaAutosize id="householdAddress" name="householdAddress" placeholder="Your Answer" className='form-control'ref='ref3'
                         value={this.state.householdAddress} 
                         onChange={this.handleUserInput}
                         onBlur={this.handleUserInput}
@@ -197,7 +208,7 @@ class I extends Component {
             </div>
             <div className="form-group">
                 <label htmlFor="address" md={12}><h4>5. Ðịa chỉ đang ở hiện tại: <span className='text-danger'>*</span></h4><small>Vui lòng viết chính xác thông tin để nhà trường gửi: thẻ SV, huy hiệu, giấy tờ,... về cho sinh viên </small></label>
-                    <TextareaAutosize id="address" name="address" placeholder="Your Answer" className="form-control"
+                    <TextareaAutosize id="address" name="address" placeholder="Your Answer" className="form-control" ref='ref4'
                     value={this.state.address} 
                     onChange={this.handleUserInput}
                     onBlur={this.handleUserInput}
@@ -206,7 +217,7 @@ class I extends Component {
             </div>
             <div className="form-group">
                 <label htmlFor="city" md={12}><h4>6. Thành phố đang ở hiện tại: <span className='text-danger'>*</span></h4></label>
-                    <TextareaAutosize id="city" name="city" placeholder="Your Answer" className="form-control"
+                    <TextareaAutosize id="city" name="city" placeholder="Your Answer" className="form-control" ref='ref5'
                     value={this.state.city} 
                     onChange={this.handleUserInput}
                     onBlur={this.handleUserInput}
@@ -215,7 +226,7 @@ class I extends Component {
             </div>
             <div className="form-group">
                 <label htmlFor="nation" md={12}><h4>7. Quốc gia đang ở hiện tại: <span className='text-danger'>*</span></h4></label>
-                    <input type='text' id="nation" name="nation" placeholder="Your Answer" className="form-control"
+                    <input type='text' id="nation" name="nation" placeholder="Your Answer" className="form-control" ref='ref6'
                     value={this.state.nation} 
                     onChange={this.handleUserInput}
                     onBlur={this.handleUserInput}
@@ -224,7 +235,7 @@ class I extends Component {
             </div>
             <div className="form-group">
                 <label htmlFor="passportNum" md={12}><h4>8. Số chứng minh nhân dân/ hộ chiếu: <span className='text-danger'>*</span></h4><small>Chú ý: viết đúng các chữ số từ 0-9</small></label>
-                    <input type='text' id="passportNum" name="passportNum" placeholder="Your Answer" className="form-control"
+                    <input type='text' id="passportNum" name="passportNum" placeholder="Your Answer" className="form-control" ref='ref7'
                     value={this.state.passportNum} 
                     onChange={this.handleUserInput}
                     onBlur={this.handleUserInput}
@@ -233,7 +244,7 @@ class I extends Component {
             </div>
             <div className="form-group">
                 <label htmlFor="issuedDate" md={12}><h4>9. Ngày cấp: <span className='text-danger'>*</span></h4><small>Date</small></label>
-                    <input type='date' id="issuedDate" name="issuedDate" placeholder="Your Answer" className="form-control"
+                    <input type='date' id="issuedDate" name="issuedDate" placeholder="Your Answer" className="form-control" ref='ref8'
                     value={this.state.issuedDate} 
                     onChange={this.handleUserInput}
                     onBlur={this.handleUserInput}
@@ -242,7 +253,7 @@ class I extends Component {
             </div>
             <div className="form-group">
                 <label htmlFor="issuedAddress" md={12}><h4>10. Nơi cấp: <span className='text-danger'>*</span></h4></label>
-                    <input type='text' id="issuedAddress" name="issuedAddress" placeholder="Your Answer" className="form-control"
+                    <input type='text' id="issuedAddress" name="issuedAddress" placeholder="Your Answer" className="form-control" ref='ref9'
                     value={this.state.issuedAddress} 
                     onChange={this.handleUserInput}
                     onBlur={this.handleUserInput}
@@ -251,7 +262,7 @@ class I extends Component {
             </div>
             <div className="form-group">
                 <label htmlFor="accface" md={12}><h4>11. Link Account Facebook <span className='text-danger'>*</span></h4><small>Ví dụ: <b><i><u>https://www.facebook.com/vinh.doanthe</u></i></b></small></label>
-                    <input type='text' id="accface" name="accface" placeholder="Your Answer" className="form-control"
+                    <input type='text' id="accface" name="accface" placeholder="Your Answer" className="form-control" ref='ref10'
                     value={this.state.accface} 
                     onChange={this.handleUserInput}
                     onBlur={this.handleUserInput}
@@ -272,7 +283,7 @@ class I extends Component {
             <div className='form-group row'>
                 <Col md={6}></Col>
                 <Col md={6}>
-                    <Button type='submit' color="primary" onClick={this.nextPage} className='mx-auto d-block btn-info' disabled={!this.state.formValid}>
+                    <Button type='submit' color="primary" onClick={this.submitPage} className='mx-auto d-block btn-info' >
                     <b>Tiếp tục</b>
                     </Button>
                 </Col>

@@ -16,9 +16,17 @@ class III extends Component {
             opinionValid: false,
             formValid: false
         }
-        this.nextPage = this.nextPage.bind(this)
+        this.submitPage = this.submitPage.bind(this)
         this.prevPage = this.prevPage.bind(this)
         this.handleUserInput = this.handleUserInput.bind(this)
+    }
+    submitPage(){
+        this.refs.ref1.textarea.focus(); this.refs.ref1.textarea.blur()
+        this.refs.ref2.textarea.focus(); this.refs.ref2.textarea.blur()
+        this.refs.ref3.textarea.focus(); this.refs.ref3.textarea.blur()
+        if(this.state.formValid) {
+        this.nextPage();
+        }
     }
     nextPage() {
         this.props.nextPage();
@@ -74,21 +82,21 @@ class III extends Component {
             <Col><p>Anh/chị vui lòng thể hiện chi tiết về nhu cầu, kế hoạch, mục tiêu, động cơ học tập của mình</p></Col>
             <div className="form-group">
                     <label htmlFor="reason" md={12}><h4>1. Tại sao bạn quyết định học Công nghệ thông tin và lựa chọn FUNIX <span className='text-danger'>*</span></h4><small>Anh/chị vui lòng chia sẻ thông tin khoảng 5-10 dòng</small></label>
-                        <TextareaAutosize id="reason" name="reason" required placeholder="Your Answer" className="form-control" rows='5'
+                        <TextareaAutosize id="reason" name="reason" required placeholder="Your Answer" className="form-control" rows='5'ref='ref1' required
                         onChange={this.handleUserInput}
                         onBlur={this.handleUserInput}/>
                     <p className='text-danger'>{this.state.formErrors.reasonValid}</p>
             </div>
             <div className="form-group">
                     <label htmlFor="target" md={12}><h4>2. Mục tiêu của bạn sau khi học tại FUNIX <span className='text-danger'>*</span></h4><small>Anh/chị vui lòng chia sẻ thông tin khoảng 5-10 dòng</small></label>
-                        <TextareaAutosize id="target" name="target" required placeholder="Your Answer" rows='5' className="form-control"
+                        <TextareaAutosize id="target" name="target" required placeholder="Your Answer" rows='5' className="form-control" ref='ref2' required
                         onChange={this.handleUserInput}
                         onBlur={this.handleUserInput}/>
                     <p className='text-danger'>{this.state.formErrors.targetValid}</p>
             </div>
             <div className="form-group">
                     <label htmlFor="opinion" md={12}><h4>3. Ý kiến của bạn muốn chia sẽ với FUNIX <span className='text-danger'>*</span></h4><small>Anh/chị vui lòng chia sẻ mong muốn, nguyện vọng hoặc các câu hỏi dành cho FUNIX, khoảng 5-10 dòng</small></label>
-                        <TextareaAutosize id="opinion" name="opinion" required placeholder="Your Answer" className="form-control" rows='5'
+                        <TextareaAutosize id="opinion" name="opinion" required placeholder="Your Answer" className="form-control" rows='5' ref='ref3' required
                         onChange={this.handleUserInput}
                         onBlur={this.handleUserInput}/>
                     <p className='text-danger'>{this.state.formErrors.opinionValid}</p>
@@ -99,7 +107,7 @@ class III extends Component {
                     Quay lại
                 </Button></Col>
                 <Col md={6}>
-                    <Button type='submit' className='mx-auto d-block btn-info' onClick={this.nextPage} disabled={!this.state.formValid}>
+                    <Button type='submit' className='mx-auto d-block btn-info' onClick={this.submitPage}>
                     Tiếp tục
                     </Button>
                 </Col>

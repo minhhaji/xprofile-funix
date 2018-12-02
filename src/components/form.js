@@ -9,7 +9,7 @@ class Form extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isPage: 4
+            isPage: 1
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.nextPage = this.nextPage.bind(this);

@@ -14,9 +14,16 @@ class IV extends Component {
             degreeValid: true,
             formValid: false,
         }
-        this.nextPage = this.nextPage.bind(this);
+        this.submitPage = this.submitPage.bind(this);
         this.prevPage = this.prevPage.bind(this);
         this.handleUserInput = this.handleUserInput.bind(this)
+    }
+    submitPage(){
+        this.refs.ref1.focus();this.refs.ref1.blur()
+        this.refs.ref2.focus();this.refs.ref2.blur()
+        if(this.state.formValid) {
+            this.nextPage();
+        }
     }
     nextPage() {
         this.props.nextPage();
@@ -72,7 +79,7 @@ class IV extends Component {
             <Col><p>Anh/chị vui lòng hoàn thiện giấy tờ để nhà trường lập hồ sơ sinh viên của anh/chị</p></Col>
             <div className="form-group">
                     <label><h4>1. Ảnh 3X4 <span className='text-danger'>*</span></h4><small>Anh/chị vui lòng scan rõ nét, chụp trên nền trắng hoặc xanh dương, tên file ảnh là tên đầy đủ của sinh viên</small></label>
-                        <input type='file' id="photo" name="photo" accept="image/png, image/jpeg, image/pdf" required
+                        <input type='file' id="photo" name="photo" accept="image/png, image/jpeg, image/pdf" required ref='ref1'
                             files={this.state.photo}
                             className="form-control"
                             onChange={this.handleUserInput}
@@ -81,7 +88,7 @@ class IV extends Component {
             </div>
             <div className="form-group">
                     <label md={12}><h4>2. CMND/ Hộ chiếu/ Giấy khai sinh<span className='text-danger'>*</span></h4><small>1 bản scan/chụp ảnh CMND 2 mặt hoặc chộ chiếu. Với các sinh viên chưa đủ tuổi làm CMND vui lòng gửi giấy khai sinh.</small></label>
-                        <input type='file' id="passportPhoto" name="passportPhoto" accept="image/png, image/jpeg, image/pdf" required
+                        <input type='file' id="passportPhoto" name="passportPhoto" accept="image/png, image/jpeg, image/pdf" required ref='ref2'
                             className="form-control"
                             onChange={this.handleUserInput}
                             onBlur={this.handleUserInput}/>
@@ -100,7 +107,7 @@ class IV extends Component {
                     Quay lại
                 </Button></Col>
                 <Col md={6}>
-                    <Button type='submit' className='mx-auto d-block btn-info' onClick={this.nextPage} disabled={!this.state.formValid}>
+                    <Button type='submit' className='mx-auto d-block btn-info' onClick={this.submitPage}>
                     Hoàn thành
                     </Button>
                 </Col>
